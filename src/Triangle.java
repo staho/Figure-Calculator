@@ -4,25 +4,49 @@
 public class Triangle extends Figure {
     private double sideA, sideB, sideC;
 
-    public Triangle(double sideA, double sideB, double sideC){
+    public double getSideA() {
+        return sideA;
+    }
+
+    public void setSideA(double sideA) {
         this.sideA = sideA;
+    }
+
+    public double getSideB() {
+        return sideB;
+    }
+
+    public void setSideB(double sideB) {
         this.sideB = sideB;
+    }
+
+    public double getSideC() {
+        return sideC;
+    }
+
+    public void setSideC(double sideC) {
         this.sideC = sideC;
+    }
+
+    public Triangle(double sideA, double sideB, double sideC){
+        setSideA(sideA);
+        setSideB(sideB);
+        setSideC(sideC);
     }
     @Override
     double calculatePerimeter(){
-        return sideA + sideB + sideC;
+        return getSideA() + getSideB() + getSideC();
     }
 
     @Override
     double calculateArea(){
         double p = calcHalfOfPerimeter();
-    return Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
+    return Math.sqrt(p * (p - getSideA()) * (p - getSideB()) * (p - getSideC()));
     }
 
     @Override
     public void print(){
-        System.out.println("Triangle with side lengths: " + sideA + " ; " + sideB + " ; " + sideC);
+        System.out.println("Triangle with side lengths: " + getSideA() + " ; " + getSideB() + " ; " + getSideC());
         printInfo();
     }
 
