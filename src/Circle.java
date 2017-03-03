@@ -2,8 +2,10 @@
  * Created by staho on 01.03.2017.
  */
 public class Circle extends Figure{
+    //fields
     private double radius;
 
+    //setters and getters
     private double getRadius() {
         return radius;
     }
@@ -12,10 +14,13 @@ public class Circle extends Figure{
         this.radius = radius;
     }
 
+    //constructors
     public Circle(double radius){
         setRadius(radius);
     }
 
+
+    //overrided methods
     @Override
     double calculatePerimeter(){
         return 2*Math.PI*getRadius();

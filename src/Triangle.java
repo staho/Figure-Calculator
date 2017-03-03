@@ -2,8 +2,10 @@
  * Created by staho on 01.03.2017.
  */
 public class Triangle extends Figure {
+    //fields
     private double sideA, sideB, sideC;
 
+    //setters and getters
     public double getSideA() {
         return sideA;
     }
@@ -28,11 +30,14 @@ public class Triangle extends Figure {
         this.sideC = sideC;
     }
 
+    //constructor
     public Triangle(double sideA, double sideB, double sideC){
         setSideA(sideA);
         setSideB(sideB);
         setSideC(sideC);
     }
+
+    //overrided methods
     @Override
     double calculatePerimeter(){
         return getSideA() + getSideB() + getSideC();
@@ -50,6 +55,7 @@ public class Triangle extends Figure {
         printInfo();
     }
 
+    //methods
     private double calcHalfOfPerimeter(){
         return calculatePerimeter()/2;
     }
